@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/firstCategoryPrefTitle">
+        <EditTextPreference
+            android:key="playerName"
+            android:title="@string/editTextPrefTitle"
+            android:summary="@string/editTextPrefSummary" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="opc_Fichero"
+        android:title="@string/title_Categoría">
+        <Preference
+            android:key="utilizarTarjetaSD"
+            android:defaultValue="false"
+            android:title="Usar tarjeta externa" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
