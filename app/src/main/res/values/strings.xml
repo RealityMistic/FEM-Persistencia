@@ -10,7 +10,7 @@
     <string name="recuperarText">Recuperar partida</string>
     <string name="aboutMessage">El juego consiste en ir comiendo piezas
     (en horizontal o en vertical) hasta conseguir que sólo quede una pieza
-    en el centro. En cada movimiento, la pieza puede saltar solo una pieza.</string>
+    en el centro. Una pieza puede saltar a la adyacente, de manera que la elimina.</string>
     <string name="firstCategoryPrefTitle">Datos personales</string>
     <string name="editTextPrefTitle">Nombre del jugador</string>
     <string name="editTextPrefSummary">Pulse para teclear el nombre del jugador</string>

@@ -1,5 +1,6 @@
 package es.upm.miw.SolitarioCelta;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
@@ -144,9 +145,16 @@ public class RepositorioPuntuaciones extends SQLiteOpenHelper {
                 + nuevaPuntuacion.getNombreJugador() + ", "
                 + nuevaPuntuacion.getNumPiezas() + ", "
                 + nuevaPuntuacion.getMomento() + " );";
+
+        ContentValues valores = new ContentValues();
+        valores.put(PuntuacionesContract.PuntuacionEntry.COL_NAME_ID, nuevaPuntuacion.getId());
+        valores.put(PuntuacionEntry.COL_NAME_NOMBRE, nuevaPuntuacion.getNombreJugador() );
+        valores.put(PuntuacionEntry.COL_NAME_DIA_HORA, nuevaPuntuacion.getMomento() );
+        valores.put(PuntuacionEntry.COL_NAME_NUM_PIEZAS, nuevaPuntuacion.getNumPiezas());
         SQLiteDatabase db = this.getWritableDatabase();
         Log.i(TAG, " antes de guardar puntuacion");
-        db.execSQL(insercionSql);
+        return db.insert(PuntuacionEntry.TABLE_NAME, null, valores);
         Log.i(TAG, " después de guardar puntuacion");
     }
+
 }
